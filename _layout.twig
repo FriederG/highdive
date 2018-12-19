@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../web/style.css" type="text/css" rel="stylesheet">
+        <title>Highdive {# ------------------------Editierbar---------------------- #}</title>
+    </head>
+    
+    <body>
+        
+        {# Navigationsleiste #}
+        <div class="homebackground"><span class="home"></span>
+            <nav>
+                <a href="#">HOME</a>
+                <a href="#produkte">Produkte</a>
+                <a href="#"><img src="../Entwurf Layout/_bilder_website/logo_highdive.png" width="144" height="94" alt="logo"></a>
+                <a href="#about">About</a>
+                <a href="#news">News</a>
+            </nav>
+        </div>
+        
+        <div class="main">
+            {# Produkte #}
+            {% block produkte %}
+            {% endblock %}
+    
+            {# About #}
+            {% block about %}
+            {% endblock %}
+    
+            {# News #}
+            {% block news %}
+            {% endblock %}
+            
+            <footer>
+                <a href=""> Impressum </a>
+                <a href=""> Kontakt </a>
+                <a href=""> Datenschutz </a>
+            </footer>
+            
+        </div>
+</body>
+    
+</html>
