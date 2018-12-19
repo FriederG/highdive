@@ -1,6 +1,71 @@
+{# Layout soll als Vorlage genutzt werden #}
 {% extends '_layout' %}
 
-{% block example %}
-<h1>{{ entry.title }}</h1>
-{# … #}
+{% block produkte %}
+
+<h2>Produkte<br></h2>
+<div class="produkte" id="produkte">         
+{% set produktlist = craft.entries().section('produkte') %}
+{% for produkte in produktlist %}
+    <div class="singleprodukt">
+        <h1>{{ produkte.produktueberschrift }}</h1>
+         {% for img in produkte.produktbild %}
+            <div>
+                <img src="{{ img.getUrl('produktbildthumb')}}" alt="Produktbild">
+            </div>
+         {% endfor %}
+         <br>
+         {{ produkte.produktbeschreibung }}
+        </div>
+{% endfor %}
+   
+{% endblock %}
+{% block about %}
+<br><br><br>
+<h2>Über uns </h2>
+<div class="about" id="about">
+    <div class="beschreibung">
+     Loremememememe
+    </div>
+    <div class="zitat"> 
+     Jeder getrunkene Tropfen Wasser <br> ist Verschwendung für einen Taucher. <br><br> Elias
+    </div>
+    <div class="portrait"><img src="../Entwurf Layout/_bilder_website/Elias.png" width="" height="200" alt="Elias Tetzlaff">
+    </div>
+{# <div class="breitesZitat">
+     Das Meer ist der letzte freie Ort auf der Welt
+     </div> #}
+    <div class="portrait">
+     bild
+    </div>
+    <div class="zitat">
+     Zitat
+    </div>
+    <div class="beschreibung">
+     Beschreibung
+    </div>
+</div>
+{% endblock %}
+
+{% block news %}
+<br><br><br>
+<h2>News</h2>
+<div class="news" id="news">
+    <div class="newseintrag">
+        <h3>Ostern unter Wasser</h3><br>
+        Texttetetx Texttetetx Texttetetx vTexttetetx Texttetetx vTexttetetx Texttetetx Texttetetx Texttetetx  
+        Texttetetx Texttetetx Texttetetx vTexttetetx Texttetetx vTexttetetx Texttetetx Texttetetx Texttetetx
+        Texttetetx Texttetetx Texttetetx vTexttetetx Texttetetx vTexttetetx Texttetetx Texttetetx Texttetetx  
+        Texttetetx Texttetetx Texttetetx vTexttetetx Texttetetx vTexttetetx Texttetetx Texttetetx Texttetetx
+        Texttetetx Texttetetx Texttetetx vTexttetetx Texttetetx vTexttetetx Texttetetx Texttetetx Texttetetx  
+        Texttetetx Texttetetx Texttetetx vTexttetetx Texttetetx vTexttetetx Texttetetx Texttetetx Texttetetx
+        Texttetetx Texttetetx Texttetetx vTexttetetx Texttetetx vTexttetetx Texttetetx Texttetetx Texttetetx  
+        Texttetetx Texttetetx Texttetetx vTexttetetx Texttetetx vTexttetetx Texttetetx Texttetetx Texttetetx
+        Texttetetx Texttetetx Texttetetx vTexttetetx Texttetetx vTexttetetx Texttetetx Texttetetx Texttetetx  
+        Texttetetx Texttetetx Texttetetx vTexttetetx Texttetetx vTexttetetx Texttetetx Texttetetx Texttetetx
+    </div>
+    <div class="newseintrag">
+        Tauchen mit Lagerfeld
+    </div>
+  </div>
 {% endblock %}
