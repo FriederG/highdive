@@ -1,0 +1,99 @@
+html {
+	font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+	text-align:center;
+}
+.homebackground {
+	background-image: url(../Entwurf%20Layout/_bilder_website/background_1.jpg);
+	height: 720px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	box-shadow: 0 1px 3px rgba(0,0,0,0,0.1);
+
+}
+nav {
+	font-size: 20px;;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+	position: fixed;
+	text-align: center;
+	top: 0px;
+	background-color: white;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+
+}
+td {
+	width: 20%;
+}
+.main {
+	background-color: #06C;
+	background-image: linear-gradient(to top, black, #0167bb);
+	color: white;
+	margin-top: -23px;
+}
+
+/*Container für die items .produkte. Definiert durch flex-Werte, wie diese sich ausrichten*/
+.produkte {
+	display: flex;
+	flex-flow: row wrap;
+	text-align: center;
+	justify-content: center;
+}
+/*einzelne Produktfelder*/
+.singleprodukt {
+	margin: 20px;
+	padding: 10px;
+	background-color: red;  
+	height: 200px;
+	width: 25%;
+}
+/*Container für die einzelnen Einträge in "Über uns" */
+.about {
+	display: flex;
+	flex-flow: row wrap;
+	text-align: center;
+	justify-content: center;
+}
+.beschreibung {
+	margin: 20px;
+	padding: 10px;
+	background-color: red;  
+	height: 200px;
+	width: 45%;
+}
+.zitat {
+	width: 20%;
+	margin: 20px;
+	padding: 10px;
+	height: 200px;
+	background-color: red;
+}
+.portrait {
+	width: 20%;
+	margin: 20px;
+	height: 200px;
+	background-color: red;
+}
+.breitesZitat {
+	font-size: large;
+}
+.news {
+	display: flex;
+	flex-flow: row wrap;
+	text-align: center;
+	justify-content: center;
+	}
+.newseintrag {
+	width: 40%;
+	height:auto;
+	margin: 20px;
+	padding: 10px;
+}
+footer {
+	display: flex;
+	justify-content: space-around;
+}
